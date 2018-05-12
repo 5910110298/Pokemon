@@ -51,7 +51,7 @@ abstract class Pokemon{
 
 	public void reducedHealth(double value){
 		this.weight -= value/10;
-		if(this.weight <=0)
+		if(this.weight <1)
 			this.weight = 1;
 	}
 

@@ -7,6 +7,7 @@ package com.jvava.pokemon;
 
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,6 +59,7 @@ public class PokemonGame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PokemonGame");
@@ -114,6 +116,8 @@ public class PokemonGame extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setText("//code :ShowTime");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -155,7 +159,9 @@ public class PokemonGame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -181,12 +187,18 @@ public class PokemonGame extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel6))
-                .addGap(24, 24, 24))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel7))
+                        .addGap(31, 31, 31))))
         );
 
         pack();
@@ -291,20 +303,25 @@ public class PokemonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-       if(jTextField1.getText().equals("Die")){
-           jLabel4.setIcon(new ImageIcon(getClass().getResource("Die.png")));
-               String Type=jComboBox2.getSelectedItem().toString();
-                    switch(Type){
-                        case "Pikachu":
-                            jTextArea1.setText("Pokemon:Soul Pikachu\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(0).maxHealth)+"\nWeight: 0");
-                            break;
-                        case "Seel":
-                            jTextArea1.setText("Pokemon:Soul Seel\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(1).maxHealth)+"\nWeight: 0");
-                            break;
-                        case "Rattata":
-                             jTextArea1.setText("Pokemon:Soul Rattata\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(2).maxHealth)+"\nWeight: 0");
-                            break;
+        int YesOrNo = JOptionPane.showConfirmDialog(null,"Are you sure ?","Kill your pokemon !", JOptionPane.YES_NO_OPTION);
+        if(YesOrNo == 0){
+            if(jTextField1.getText().equals("Die")){
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("Die.png")));
+                    String Type=jComboBox2.getSelectedItem().toString();
+                        switch(Type){
+                            case "Pikachu":
+                                jTextArea1.setText("Pokemon:Soul Pikachu\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(0).maxHealth)+"\nWeight: 0");
+                                break;
+                            case "Seel":
+                                jTextArea1.setText("Pokemon:Soul Seel\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(1).maxHealth)+"\nWeight: 0");
+                                break;
+                            case "Rattata":
+                                jTextArea1.setText("Pokemon:Soul Rattata\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(2).maxHealth)+"\nWeight: 0");
+                                break;
                     }
+        }
+            else{}
+            
         }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -356,6 +373,7 @@ public class PokemonGame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
