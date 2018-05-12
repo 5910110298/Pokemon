@@ -9,7 +9,7 @@ public class Seel extends Pokemon implements Swimmable{
 	private static final int maxGroupHealth = 250;
 	public Seel(){
 		super("Seel",
-		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000)%100);
+		      ( (Math.random()*1000) % (maxGroupHealth))+50,(Math.random()*1000)%100);
 
 		this.attackSkill = PokemonSkill.getPokemonSkill("Tail Whip");
 		this.untimatedSkill = PokemonSkill.getPokemonSkill("Water Pulse");

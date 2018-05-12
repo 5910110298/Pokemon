@@ -9,7 +9,7 @@ public class Pikachu extends Pokemon implements Walkable{
 	private static final int maxGroupHealth = 200;
 	public Pikachu(){
 		super("Pikachu",
-		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000)%50);
+		     ( (Math.random()*1000) % (maxGroupHealth))+50,(Math.random()*1000)%50);
                       
 		this.attackSkill = PokemonSkill.getPokemonSkill("Thunder Shock");
 		this.untimatedSkill = PokemonSkill.getPokemonSkill("Thunderbolt");

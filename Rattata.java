@@ -9,7 +9,7 @@ public class Rattata extends Pokemon implements Walkable{
 	private static final int maxGroupHealth = 200;
 	public Rattata(){
 		super("Rattata",
-		      (Math.random()*1000) % (maxGroupHealth+1),(Math.random()*1000)%40);
+		      ( (Math.random()*1000) % (maxGroupHealth))+50,(Math.random()*1000)%40);
 
 		this.attackSkill = PokemonSkill.getPokemonSkill("Bite");
 		this.untimatedSkill = PokemonSkill.getPokemonSkill("Rider Kick");
