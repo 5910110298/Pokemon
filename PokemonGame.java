@@ -134,6 +134,10 @@ public class PokemonGame extends javax.swing.JFrame {
         });
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pikachu", "Seel", "Rattata" }));
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -400,17 +404,42 @@ public class PokemonGame extends javax.swing.JFrame {
                 jTextArea1.setText(printPokemons(pokemons,0));
                 break;
           case "SeelAttackSeel":
-                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuAttackSeel.png")))
-                        ;
+               int YesOrNo1 = JOptionPane.showConfirmDialog(null,"attack yourself ?","attack yourself !", JOptionPane.YES_NO_OPTION);
+        if(YesOrNo1 == 0){
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelAttackSeel.png")));
+                        
                 jTextArea1.setText(printPokemons(pokemons,1));
-                break;
+                break;}
+        else{break;}
           case "SeelAttackRattata":
                 jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelAttackRattata.png")));
                 
                 jTextArea1.setText(printPokemons(pokemons,2));
                 break;
+          case "RattataAttackPikachu":
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataAttackPikachu.png")));
+                
+                jTextArea1.setText(printPokemons(pokemons,0));
+                break;
+          case "RattataAttackSeel":
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataAttackSeel.png")));
+                        
+                jTextArea1.setText(printPokemons(pokemons,1));
+                break;
+          case "RattataAttackRattata":
+              int YesOrNo2 = JOptionPane.showConfirmDialog(null,"attack yourself ?","attack yourself !", JOptionPane.YES_NO_OPTION);
+        if(YesOrNo2 == 0){
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataAttackRattata.png")));
+                
+                jTextArea1.setText(printPokemons(pokemons,2));
+                break; }  
+        else{break;}
                   }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
 
     /**
      * @param args the command line arguments
