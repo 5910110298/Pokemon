@@ -167,7 +167,53 @@ public class PokemonGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       switch(jComboBox2.getSelectedItem().toString()+jComboBox1.getSelectedItem().toString()){
+           case "PikachuBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuBerry.png")));
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "SeelBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelBerry.png")));  
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "RattataBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataBerry.png")));  
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "PikachuGoldBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuGoldBerry.png")));
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "SeelGoldBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelGoldBerry.png")));  
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "RattataGoldBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataGoldBerry.png")));  
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "PikachuMysteryBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuMysteryBerry.png")));
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "SeelMysteryBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelMysteryBerry.png")));  
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;
+           case "RattataMysteryBerry" :
+               jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataMysteryBerry.png")));  
+               
+               jTextArea1.setText(printPokemons(pokemons,0));
+               break;   
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
