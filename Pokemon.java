@@ -7,15 +7,16 @@ package com.jvava.pokemon;
 
 abstract class Pokemon{
 	public final double maxHealth;
-	protected double health;
+	protected double health,weight;
 	protected String name;
 	protected PokemonSkill attackSkill;
 	protected PokemonSkill untimatedSkill;
 
-	public Pokemon(String name, double maxHealth){
+	public Pokemon(String name, double maxHealth,double weight){
 		this.name = name;
 		this.health = maxHealth;
 		this.maxHealth = maxHealth;
+                this.weight= weight;
 	}
 
 	public double getHealth(){
@@ -25,11 +26,15 @@ abstract class Pokemon{
 	public String getName(){
 		return this.name;
 	}
+        public double getWeight(){
+		return this.weight;
+	}
 	
 	public void eat(Berry berry){
 		this.health += berry.getRestoreValue();
 		if(this.health > this.maxHealth)
 			this.health = this.maxHealth;
+                this.weight += berry.getRestoreValue();
 	}
 
 	public void attack(Pokemon rival){
