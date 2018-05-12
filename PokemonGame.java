@@ -109,7 +109,7 @@ public class PokemonGame extends javax.swing.JFrame {
 
         jLabel2.setText("Code :");
 
-        jLabel6.setText("//secret code :Die");
+        jLabel6.setText("//secret code :KillAll");
 
         jButton3.setText("Exercies");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -318,7 +318,7 @@ public class PokemonGame extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         int YesOrNo = JOptionPane.showConfirmDialog(null,"Are you sure ?","Kill all your pokemon !", JOptionPane.YES_NO_OPTION);
         if(YesOrNo == 0){
-            if(jTextField1.getText().equals("Die")){
+            if(jTextField1.getText().equals("KillAll")){
                 jLabel4.setIcon(new ImageIcon(getClass().getResource("Die.png")));
                     String Type=jComboBox2.getSelectedItem().toString();
                         switch(Type){
