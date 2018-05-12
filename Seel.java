@@ -20,6 +20,6 @@ public class Seel extends Pokemon implements Swimmable{
 	}
 
 	public void swim(){
-		this.reducedHealth(10);
+		this.reducedWeight(10);
 	}	}
 

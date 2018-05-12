@@ -48,8 +48,17 @@ abstract class Pokemon{
 	public void injure(PokemonSkill skill){
 		this.reducedHealth(skill.getDamage());
 	}
-
+        public double revive () {
+              return this.health = this.maxHealth;
+        }
+        
 	public void reducedHealth(double value){
+		this.health -= value;
+		if(this.health <0)
+			this.health = 0;
+	}
+        
+        public void reducedWeight(double value){
 		this.weight -= value/10;
 		if(this.weight <1)
 			this.weight = 1;
