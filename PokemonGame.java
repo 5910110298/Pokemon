@@ -54,6 +54,10 @@ public class PokemonGame extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PokemonGame");
@@ -93,6 +97,23 @@ public class PokemonGame extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Berry", "GoldBerry", "MysteryBerry" }));
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Code :");
+
+        jLabel6.setText("//secret code :Die");
+
+        jButton3.setText("Exercies");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,6 +121,18 @@ public class PokemonGame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addComponent(jLabel3)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -114,19 +147,16 @@ public class PokemonGame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(264, 264, 264))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(102, 102, 102)
-                                .addComponent(jLabel3)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                        .addComponent(jButton3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,17 +170,23 @@ public class PokemonGame extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(27, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel6))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -163,47 +199,47 @@ public class PokemonGame extends javax.swing.JFrame {
         switch(Type+TypeBerry){
            case "PikachuBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuBerry.png")));
-               
+               pokemons.get(0).eat(new Berry(0));
                jTextArea1.setText(printPokemons(pokemons,0));
                break;
            case "SeelBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelBerry.png")));  
-               
+               pokemons.get(1).eat(new Berry(0));
                jTextArea1.setText(printPokemons(pokemons,1));
                break;
            case "RattataBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataBerry.png")));  
-               
+               pokemons.get(2).eat(new Berry(0));
                jTextArea1.setText(printPokemons(pokemons,2));
                break;
            case "PikachuGoldBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuGoldBerry.png")));
-               
+               pokemons.get(0).eat(new Berry(1));
                jTextArea1.setText(printPokemons(pokemons,0));
                break;
            case "SeelGoldBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelGoldBerry.png")));  
-               
+               pokemons.get(1).eat(new Berry(1));
                jTextArea1.setText(printPokemons(pokemons,1));
                break;
            case "RattataGoldBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataGoldBerry.png")));  
-               
+               pokemons.get(2).eat(new Berry(1));
                jTextArea1.setText(printPokemons(pokemons,2));
                break;
            case "PikachuMysteryBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuMysteryBerry.png")));
-               
+               pokemons.get(0).eat(new Berry(2));
                jTextArea1.setText(printPokemons(pokemons,0));
                break;
            case "SeelMysteryBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelMysteryBerry.png")));  
-               
+               pokemons.get(1).eat(new Berry(2));
                jTextArea1.setText(printPokemons(pokemons,1));
                break;
            case "RattataMysteryBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataMysteryBerry.png")));  
-               
+               pokemons.get(2).eat(new Berry(2));
                jTextArea1.setText(printPokemons(pokemons,2));
                break;   
        }
@@ -232,6 +268,45 @@ public class PokemonGame extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String Type=jComboBox2.getSelectedItem().toString();
+        switch(Type){
+          case "Pikachu":
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("Pikachu.png")));
+                pokemons.get(0).move();
+                jTextArea1.setText(printPokemons(pokemons,0));
+                break;
+          case "Seel":
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("Seel.png")));
+                pokemons.get(1).move();
+                jTextArea1.setText(printPokemons(pokemons,1));
+                break;
+          case "Rattata":
+                jLabel4.setIcon(new ImageIcon(getClass().getResource("Rattata.png")));
+                pokemons.get(2).move();
+                jTextArea1.setText(printPokemons(pokemons,2));
+                break;
+                  }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+       if(jTextField1.getText().equals("Die")){
+           jLabel4.setIcon(new ImageIcon(getClass().getResource("Die.png")));
+               String Type=jComboBox2.getSelectedItem().toString();
+                    switch(Type){
+                        case "Pikachu":
+                            jTextArea1.setText("Pokemon:Soul Pikachu\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(0).maxHealth)+"\nWeight: 0");
+                            break;
+                        case "Seel":
+                            jTextArea1.setText("Pokemon:Soul Seel\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(1).maxHealth)+"\nWeight: 0");
+                            break;
+                        case "Rattata":
+                             jTextArea1.setText("Pokemon:Soul Rattata\nHealth: 0"+"/"+String.format("%.0f",pokemons.get(2).maxHealth)+"\nWeight: 0");
+                            break;
+                    }
+        }
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,13 +347,17 @@ public class PokemonGame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
