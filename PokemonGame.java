@@ -47,7 +47,6 @@ public class PokemonGame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -65,12 +64,9 @@ public class PokemonGame extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel2.setText("Pokemon ");
-
         jLabel3.setText("status");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/jvava/pokemon/Pikachu.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/jvava/pokemon/Pokeball.PNG"))); // NOI18N
 
         jButton1.setText("Eat");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -120,37 +116,31 @@ public class PokemonGame extends javax.swing.JFrame {
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(264, 264, 264))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(39, 39, 39))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(141, 141, 141)
+                                .addGap(102, 102, 102)
                                 .addComponent(jLabel3)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(jLabel2)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(32, 32, 32)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
@@ -167,7 +157,10 @@ public class PokemonGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       switch(jComboBox2.getSelectedItem().toString()+jComboBox1.getSelectedItem().toString()){
+     
+        String Type=jComboBox2.getSelectedItem().toString();
+        String TypeBerry=jComboBox1.getSelectedItem().toString();
+        switch(Type+TypeBerry){
            case "PikachuBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuBerry.png")));
                
@@ -176,12 +169,12 @@ public class PokemonGame extends javax.swing.JFrame {
            case "SeelBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelBerry.png")));  
                
-               jTextArea1.setText(printPokemons(pokemons,0));
+               jTextArea1.setText(printPokemons(pokemons,1));
                break;
            case "RattataBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataBerry.png")));  
                
-               jTextArea1.setText(printPokemons(pokemons,0));
+               jTextArea1.setText(printPokemons(pokemons,2));
                break;
            case "PikachuGoldBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuGoldBerry.png")));
@@ -191,12 +184,12 @@ public class PokemonGame extends javax.swing.JFrame {
            case "SeelGoldBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelGoldBerry.png")));  
                
-               jTextArea1.setText(printPokemons(pokemons,0));
+               jTextArea1.setText(printPokemons(pokemons,1));
                break;
            case "RattataGoldBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataGoldBerry.png")));  
                
-               jTextArea1.setText(printPokemons(pokemons,0));
+               jTextArea1.setText(printPokemons(pokemons,2));
                break;
            case "PikachuMysteryBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("PikachuMysteryBerry.png")));
@@ -206,18 +199,19 @@ public class PokemonGame extends javax.swing.JFrame {
            case "SeelMysteryBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("SeelMysteryBerry.png")));  
                
-               jTextArea1.setText(printPokemons(pokemons,0));
+               jTextArea1.setText(printPokemons(pokemons,1));
                break;
            case "RattataMysteryBerry" :
                jLabel4.setIcon(new ImageIcon(getClass().getResource("RattataMysteryBerry.png")));  
                
-               jTextArea1.setText(printPokemons(pokemons,0));
+               jTextArea1.setText(printPokemons(pokemons,2));
                break;   
        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      switch(jComboBox2.getSelectedItem().toString()){
+        String Type=jComboBox2.getSelectedItem().toString();
+        switch(Type){
           case "Pikachu":
                 jLabel4.setIcon(new ImageIcon(getClass().getResource("Pikachu.png")));
                 jTextArea1.setText(printPokemons(pokemons,0));
@@ -281,7 +275,6 @@ public class PokemonGame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
